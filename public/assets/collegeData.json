@@ -1,0 +1,396 @@
+[
+  {
+    "collegeId": "clg001",
+    "collegeName": "Green Valley University",
+    "collegeImage": "https://example.com/images/green-valley.jpg",
+    "admissionDates": {
+      "start": "2025-06-01",
+      "end": "2025-08-15"
+    },
+    "admissionProcess": {
+      "steps": [
+        "Online registration via university portal",
+        "Document submission",
+        "Entrance exam (GVUET)",
+        "Interview & Counseling",
+        "Fee payment and confirmation"
+      ],
+      "requirements": [
+        "High School Certificate",
+        "National ID or Passport",
+        "Photographs",
+        "Entrance Exam Scorecard"
+      ],
+      "contact": {
+        "email": "admissions@gvu.edu",
+        "phone": "+880123456789",
+        "website": "https://gvu.edu/admissions"
+      }
+    },
+    "events": [
+      {
+        "name": "TechFest 2025",
+        "date": "2025-09-20",
+        "location": "Main Auditorium",
+        "details": "A 2-day technology event featuring hackathons, project demos, and expert talks."
+      },
+      {
+        "name": "Cultural Fiesta",
+        "date": "2025-10-15",
+        "location": "Open Air Theatre",
+        "details": "Celebration of diverse cultures with music, dance, and food stalls from various regions."
+      }
+    ],
+    "researchHistory": {
+      "totalPublishedPapers": 320,
+      "topDepartments": [
+        "Computer Science",
+        "Biotechnology",
+        "Mechanical Engineering"
+      ],
+      "recentResearchWorks": [
+        {
+          "title": "AI for Disaster Prediction",
+          "year": 2024,
+          "description": "Using machine learning to predict and respond to natural disasters.",
+          "leadResearcher": "Dr. Tanvir Rahman"
+        }
+      ]
+    },
+    "sports": {
+      "availableSports": ["Football", "Cricket", "Badminton", "Table Tennis", "Athletics"],
+      "facilities": {
+        "stadium": "GVU Sports Arena",
+        "indoorCourt": "Multi-purpose Indoor Hall",
+        "gym": true,
+        "swimmingPool": false
+      },
+      "annualEvents": [
+        {
+          "eventName": "Inter-College Football",
+          "month": "November",
+          "description": "Regional tournament among top colleges."
+        }
+      ]
+    }
+  },
+  {
+    "collegeId": "clg002",
+    "collegeName": "Lakewood Institute of Technology",
+    "collegeImage": "https://example.com/images/lakewood.jpg",
+    "admissionDates": {
+      "start": "2025-07-01",
+      "end": "2025-09-01"
+    },
+    "admissionProcess": {
+      "steps": [
+        "Create online profile",
+        "Submit required documents",
+        "Attend aptitude test",
+        "Wait for merit list",
+        "Submit fees"
+      ],
+      "requirements": [
+        "SSC & HSC Certificates",
+        "NID or Birth Certificate",
+        "Passport Size Photos"
+      ],
+      "contact": {
+        "email": "admissions@lakewood.edu",
+        "phone": "+880987654321",
+        "website": "https://lakewood.edu"
+      }
+    },
+    "events": [
+      {
+        "name": "StartUp Bootcamp",
+        "date": "2025-09-25",
+        "location": "Innovation Hub",
+        "details": "Trainings and mentorship for student startups."
+      }
+    ],
+    "researchHistory": {
+      "totalPublishedPapers": 150,
+      "topDepartments": ["Electronics", "Robotics", "IT"],
+      "recentResearchWorks": [
+        {
+          "title": "Automation in Smart Homes",
+          "year": 2023,
+          "description": "Building cost-effective IoT solutions.",
+          "leadResearcher": "Dr. Reza Mahmud"
+        }
+      ]
+    },
+    "sports": {
+      "availableSports": ["Basketball", "Volleyball", "Badminton"],
+      "facilities": {
+        "stadium": "Lakewood Court",
+        "indoorCourt": "Lakewood Arena",
+        "gym": false,
+        "swimmingPool": true
+      },
+      "annualEvents": [
+        {
+          "eventName": "Tech-Sports Fusion",
+          "month": "March",
+          "description": "Interdisciplinary sports with tech challenges."
+        }
+      ]
+    }
+  },
+  {
+    "collegeId": "clg003",
+    "collegeName": "Hillside Medical College",
+    "collegeImage": "https://example.com/images/hillside.jpg",
+    "admissionDates": {
+      "start": "2025-05-10",
+      "end": "2025-07-30"
+    },
+    "admissionProcess": {
+      "steps": [
+        "Online application",
+        "MBBS Entrance Test",
+        "Medical test",
+        "Document verification",
+        "Final admission & fee payment"
+      ],
+      "requirements": [
+        "Medical Entrance Pass",
+        "Health Certificate",
+        "Previous Academic Certificates"
+      ],
+      "contact": {
+        "email": "info@hmc.edu",
+        "phone": "+8801555123456",
+        "website": "https://hmc.edu"
+      }
+    },
+    "events": [
+      {
+        "name": "Medical Innovation Summit",
+        "date": "2025-10-01",
+        "location": "Research Hall",
+        "details": "Papers, projects and keynote sessions on latest in medical science."
+      }
+    ],
+    "researchHistory": {
+      "totalPublishedPapers": 450,
+      "topDepartments": ["Pathology", "Pharmacology", "Neuroscience"],
+      "recentResearchWorks": [
+        {
+          "title": "Breakthrough in Neural Regeneration",
+          "year": 2024,
+          "description": "Testing new approaches in spinal cord regeneration.",
+          "leadResearcher": "Dr. Samira Haque"
+        }
+      ]
+    },
+    "sports": {
+      "availableSports": ["Indoor Gym", "Yoga", "Cricket"],
+      "facilities": {
+        "stadium": "HMC Ground",
+        "indoorCourt": "Wellness Center",
+        "gym": true,
+        "swimmingPool": false
+      },
+      "annualEvents": [
+        {
+          "eventName": "Healthy Body Challenge",
+          "month": "May",
+          "description": "Fitness and wellness competitions among departments."
+        }
+      ]
+    }
+  },
+  {
+    "collegeId": "clg004",
+    "collegeName": "Skyline Architecture Academy",
+    "collegeImage": "https://example.com/images/skyline.jpg",
+    "admissionDates": {
+      "start": "2025-06-10",
+      "end": "2025-09-01"
+    },
+    "admissionProcess": {
+      "steps": [
+        "Application form fill-up",
+        "Portfolio review",
+        "Interview",
+        "Merit list publication",
+        "Fee deposit"
+      ],
+      "requirements": [
+        "HSC or equivalent",
+        "Architecture Portfolio (PDF or Hardcopy)",
+        "Recommendation Letters"
+      ],
+      "contact": {
+        "email": "admissions@skyarch.edu",
+        "phone": "+8801781234567",
+        "website": "https://skyarch.edu"
+      }
+    },
+    "events": [
+      {
+        "name": "Arch Expo 2025",
+        "date": "2025-11-10",
+        "location": "Design Pavilion",
+        "details": "Public exhibition of student designs, structures, and models."
+      }
+    ],
+    "researchHistory": {
+      "totalPublishedPapers": 210,
+      "topDepartments": ["Urban Planning", "Environmental Design"],
+      "recentResearchWorks": [
+        {
+          "title": "Green Roof Architecture in Bangladesh",
+          "year": 2023,
+          "description": "Case studies on environmental impact of green building.",
+          "leadResearcher": "Prof. Anwarul Kabir"
+        }
+      ]
+    },
+    "sports": {
+      "availableSports": ["Table Tennis", "Chess", "Indoor Cricket"],
+      "facilities": {
+        "stadium": null,
+        "indoorCourt": "Creative Lounge",
+        "gym": false,
+        "swimmingPool": false
+      },
+      "annualEvents": [
+        {
+          "eventName": "Design Meets Sports",
+          "month": "December",
+          "description": "Fun competitions like chair race, design relays, etc."
+        }
+      ]
+    }
+  },
+  {
+    "collegeId": "clg005",
+    "collegeName": "Northern Polytechnic Institute",
+    "collegeImage": "https://example.com/images/northern.jpg",
+    "admissionDates": {
+      "start": "2025-05-01",
+      "end": "2025-07-15"
+    },
+    "admissionProcess": {
+      "steps": [
+        "Entrance test registration",
+        "Written test",
+        "Viva",
+        "Document review",
+        "Admission confirmation"
+      ],
+      "requirements": [
+        "Diploma application form",
+        "SSC/HSC Certificates",
+        "Test result card"
+      ],
+      "contact": {
+        "email": "admit@npi.edu",
+        "phone": "+8801998765432",
+        "website": "https://npi.edu"
+      }
+    },
+    "events": [
+      {
+        "name": "Tech Demo Day",
+        "date": "2025-08-25",
+        "location": "Lab Complex",
+        "details": "Showcasing projects from all departments."
+      }
+    ],
+    "researchHistory": {
+      "totalPublishedPapers": 95,
+      "topDepartments": ["Mechanical", "Electrical"],
+      "recentResearchWorks": [
+        {
+          "title": "Low-Cost Wind Turbine",
+          "year": 2024,
+          "description": "Affordable and compact turbines for rural power.",
+          "leadResearcher": "Engr. Khalid Hossain"
+        }
+      ]
+    },
+    "sports": {
+      "availableSports": ["Football", "Cricket"],
+      "facilities": {
+        "stadium": "NPI Ground",
+        "indoorCourt": "Tech Arena",
+        "gym": true,
+        "swimmingPool": false
+      },
+      "annualEvents": [
+        {
+          "eventName": "Battle of the Batches",
+          "month": "January",
+          "description": "Friendly matches among graduating classes."
+        }
+      ]
+    }
+  },
+  {
+    "collegeId": "clg006",
+    "collegeName": "Blue Horizon Business School",
+    "collegeImage": "https://example.com/images/blue-horizon.jpg",
+    "admissionDates": {
+      "start": "2025-04-15",
+      "end": "2025-06-30"
+    },
+    "admissionProcess": {
+      "steps": [
+        "Submit online application",
+        "Appear in BHBS Aptitude Test",
+        "Interview & Essay",
+        "Admission confirmation"
+      ],
+      "requirements": [
+        "Academic transcripts",
+        "Motivation letter",
+        "Photo ID"
+      ],
+      "contact": {
+        "email": "admissions@bhbs.edu",
+        "phone": "+8801711123456",
+        "website": "https://bhbs.edu"
+      }
+    },
+    "events": [
+      {
+        "name": "Entrepreneurship Week",
+        "date": "2025-10-01",
+        "location": "Business Incubation Center",
+        "details": "Workshops, investor meetups, and startup pitching."
+      }
+    ],
+    "researchHistory": {
+      "totalPublishedPapers": 185,
+      "topDepartments": ["Finance", "Marketing", "Business Analytics"],
+      "recentResearchWorks": [
+        {
+          "title": "Impact of Mobile Banking on SMEs",
+          "year": 2023,
+          "description": "A study on adoption and impact in rural areas.",
+          "leadResearcher": "Dr. Rubaiya Ahmed"
+        }
+      ]
+    },
+    "sports": {
+      "availableSports": ["Basketball", "Swimming", "Table Tennis"],
+      "facilities": {
+        "stadium": "BHBS Court",
+        "indoorCourt": "B-Sport Hall",
+        "gym": true,
+        "swimmingPool": true
+      },
+      "annualEvents": [
+        {
+          "eventName": "B-School Games",
+          "month": "September",
+          "description": "Sports and management games for all students."
+        }
+      ]
+    }
+  }
+]
