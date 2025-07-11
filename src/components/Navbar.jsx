@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Navbar() {
@@ -33,8 +34,18 @@ export default function Navbar() {
     </ul>
   </div>
   <div className="navbar-end gap-x-2 px-2">
-   <button>Sign Up</button>
-   <button>Sign In</button>
+   <Link
+                      href="/login"
+                      className="rounded-md bg-teal-600 px-5 py-2.5 text-[18px]  font-medium text-white shadow-sm hover:bg-teal-700"
+                    >
+                      Login
+                    </Link>
+   <Link
+                      href="/register"
+                      className="rounded-md bg-teal-600 px-5 py-2.5 text-[18px] font-medium text-white shadow-sm hover:bg-blue-700"
+                    >
+                      Register
+                    </Link>
   </div>
 </div>
     </div>

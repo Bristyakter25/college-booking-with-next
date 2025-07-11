@@ -1,0 +1,85 @@
+'use client';
+
+import { useRouter } from "next/navigation";
+// import { signIn } from "next-auth/react";
+// import Swal from "sweetalert2";
+
+export default function SignIn() {
+  // const router = useRouter();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+console.log(name,email,password);
+  try {
+      const res = await fetch("http://localhost:5000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        alert("Login successful!");
+        
+      } else {
+        setError(result.message || "Login failed");
+      }
+    } catch (err) {
+      console.error("Login error:", err);
+      setError("Something went wrong");
+    }
+  };
+
+  return (
+   <form onSubmit={handleLogin} className="space-y-5">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+              placeholder="John Doe"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password" className="block  text-sm font-medium text-gray-700">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              className="mt-1 dark:text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full py-2 px-4 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition"
+          >
+            Login
+          </button>
+        </form>
+  );
+}
