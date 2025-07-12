@@ -1,5 +1,7 @@
 'use client';
 
+import Link from "next/link";
+
 // import { useRouter } from 'next/navigation';
 // import Swal from 'sweetalert2';
 // import { registerUser } from '../actions/auth/registerUser';
@@ -82,6 +84,7 @@ export default function SignUp() {
           >
             Register
           </button>
+           <p className="dark:text-black text-center">Already registered? <Link  href="/login" className="text-red-500">Sign In </Link> Here!</p>
         </form>
   );
 }

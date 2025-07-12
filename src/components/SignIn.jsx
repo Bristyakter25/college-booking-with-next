@@ -1,8 +1,9 @@
 'use client';
 
-import { useRouter } from "next/navigation";
-// import { signIn } from "next-auth/react";
-// import Swal from "sweetalert2";
+import Link from "next/link";
+import SocialLogin from "./SocialLogin";
+
+
 
 export default function SignIn() {
   // const router = useRouter();
@@ -80,6 +81,14 @@ console.log(name,email,password);
           >
             Login
           </button>
+          <SocialLogin></SocialLogin>
+          <p className="mt-2 dark:text-black text-center ">
+  Forgot your password?{" "}
+  <Link href="/forgot-password" className="text-blue-600 underline">
+    Reset here
+  </Link>
+</p>
+          <p className="dark:text-black text-center">New User? <Link href="/register" className="text-red-500">Sign Up </Link> Here!</p>
         </form>
   );
 }

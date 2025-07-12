@@ -1,7 +1,8 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials";
 import { loginUser } from "../../../actions/auth/loginUser";
-
+import GoogleProvider from "next-auth/providers/google";
+import GitHubProvider from "next-auth/providers/github";
 export const authOptions = {
   // Configure one or more authentication providers
    providers: [
@@ -31,11 +32,42 @@ export const authOptions = {
         // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
       }
     }
+  }),
+  GoogleProvider({
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET
+  }),
+GitHubProvider({
+    clientId: process.env.GITHUB_ID,
+    clientSecret: process.env.GITHUB_SECRET
   })
 ],
 pages: {
   signIn: "/login"
-}
+},
+
+ callbacks: {
+    async signIn({ user, account, profile }) {
+      // Only do this for social providers, skip for credentials login
+      if (account.provider === "google" || account.provider === "github") {
+        try {
+          await fetch("http://localhost:5000/social-user", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: user.name,
+              email: user.email,
+              image: user.image
+            }),
+          });
+        } catch (error) {
+          console.error("Error saving social user:", error);
+          return false; // Prevent sign-in on failure if you want
+        }
+      }
+      return true; // Allow sign in
+    }
+  }
 }
 
 
