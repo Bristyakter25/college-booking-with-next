@@ -45,7 +45,7 @@ export default function AllColleges() {
         {filteredColleges.map(college => (
           <div
             key={college._id || college.collegeId}
-            className="border rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow bg-white"
+            className="border rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow dark:bg-blue-950 bg-white"
           >
             <img
               src={college.collegeImage}
@@ -57,7 +57,7 @@ export default function AllColleges() {
             <div className="p-4">
               <h2 className="text-xl font-semibold mb-2">{college.collegeName}</h2>
 
-              <p className="text-sm text-gray-600 mb-2">
+              <p className="text-sm dark:text-white text-gray-600 mb-2">
                 <span className="font-semibold">Admission Dates:</span>{" "}
                 {new Date(college.admissionDates?.start).toLocaleDateString()} -{" "}
                 {new Date(college.admissionDates?.end).toLocaleDateString()}
@@ -66,7 +66,7 @@ export default function AllColleges() {
               {/* Admission Process */}
               <details className="mb-3">
                 <summary className="cursor-pointer font-semibold text-teal-600">Admission Process</summary>
-                <div className="mt-2 text-sm text-gray-700">
+                <div className="mt-2 text-sm dark:text-white text-gray-700">
                   <p><strong>Steps:</strong></p>
                   <ul className="list-disc ml-5 mb-2">
                     {college.admissionProcess?.steps.map((step, i) => (
@@ -89,9 +89,9 @@ export default function AllColleges() {
               {/* Events */}
               <details className="mb-3">
                 <summary className="cursor-pointer font-semibold text-teal-600">Events</summary>
-                <div className="mt-2 text-sm text-gray-700">
+                <div className="mt-2 dark:text-white text-sm text-gray-700">
                   {college.events?.map((event, i) => (
-                    <div key={i} className="mb-3 border rounded p-2 bg-gray-50">
+                    <div key={i} className="mb-3 border rounded p-2 dark:bg-black bg-gray-50">
                       <p><strong>{event.name}</strong> — {new Date(event.date).toLocaleDateString()}</p>
                       <p><em>{event.location}</em></p>
                       <p>{event.details}</p>
@@ -103,13 +103,13 @@ export default function AllColleges() {
               {/* Research History */}
               <details className="mb-3">
                 <summary className="cursor-pointer font-semibold text-teal-600">Research History</summary>
-                <div className="mt-2 text-sm text-gray-700">
+                <div className="mt-2 dark:text-white text-sm text-gray-700">
                   <p><strong>Total Published Papers:</strong> {college.researchHistory?.totalPublishedPapers}</p>
                   <p><strong>Top Departments:</strong> {college.researchHistory?.topDepartments.join(", ")}</p>
                   <div className="mt-2">
                     <p><strong>Recent Research Works:</strong></p>
                     {college.researchHistory?.recentResearchWorks.map((work, i) => (
-                      <div key={i} className="mb-2 p-2 border rounded bg-gray-50">
+                      <div key={i} className="mb-2 p-2 border rounded bg-gray-50 dark:bg-black">
                         <p><strong>{work.title}</strong> ({work.year})</p>
                         <p>{work.description}</p>
                         <p><em>Lead Researcher: {work.leadResearcher}</em></p>
@@ -122,7 +122,7 @@ export default function AllColleges() {
               {/* Sports */}
               <details>
                 <summary className="cursor-pointer font-semibold text-teal-600">Sports</summary>
-                <div className="mt-2 text-sm text-gray-700">
+                <div className="mt-2 dark:text-white text-sm text-gray-700">
                   <p><strong>Available Sports:</strong> {college.sports?.availableSports.join(", ")}</p>
                   <p><strong>Facilities:</strong></p>
                   <ul className="list-disc ml-5 mb-2">
@@ -133,7 +133,7 @@ export default function AllColleges() {
                   </ul>
                   <p><strong>Annual Events:</strong></p>
                   {college.sports?.annualEvents.map((event, i) => (
-                    <div key={i} className="mb-2 p-2 border rounded bg-gray-50">
+                    <div key={i} className="mb-2 p-2 border rounded dark:bg-black bg-gray-50">
                       <p><strong>{event.eventName}</strong> ({event.month})</p>
                       <p>{event.description}</p>
                     </div>

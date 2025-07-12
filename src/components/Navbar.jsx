@@ -9,8 +9,8 @@ export default function Navbar() {
 
   const links = (
     <>
-      <li>Home</li>
-      <li>Colleges</li>
+      <li><Link href="/">Home</Link></li>
+      <li><Link href="/allColleges">Colleges</Link></li>
       <li>Admission</li>
       <li>My College</li>
     </>
