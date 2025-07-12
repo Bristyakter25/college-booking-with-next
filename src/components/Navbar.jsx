@@ -6,13 +6,14 @@ import { signOut, useSession } from 'next-auth/react';
 
 export default function Navbar() {
   const { data: session } = useSession();
+ console.log("Navbar session:", session);
 
   const links = (
     <>
       <li><Link href="/">Home</Link></li>
       <li><Link href="/allColleges">Colleges</Link></li>
-      <li>Admission</li>
-      <li>My College</li>
+      <li><Link href="/admissionRoute">Admission</Link></li>
+      <li><Link href="/my-college">My College</Link></li>
     </>
   );
 
@@ -43,11 +44,7 @@ export default function Navbar() {
           {session?.user ? (
             <>
               <div className="flex items-center gap-2">
-                <img
-                  src={session.user.image || '/default-profile.png'}
-                  alt="User Profile"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
+                <p>{session.user.name}</p>
                 <button
                   onClick={() => signOut()}
                   className="rounded-md bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-red-600"

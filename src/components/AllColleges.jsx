@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function AllColleges() {
@@ -64,7 +65,7 @@ export default function AllColleges() {
               </p>
 
               {/* Admission Process */}
-              <details className="mb-3">
+              {/* <details className="mb-3">
                 <summary className="cursor-pointer font-semibold text-teal-600">Admission Process</summary>
                 <div className="mt-2 text-sm dark:text-white text-gray-700">
                   <p><strong>Steps:</strong></p>
@@ -84,10 +85,10 @@ export default function AllColleges() {
                   <p>Phone: {college.admissionProcess?.contact.phone}</p>
                   <p>Website: <a href={college.admissionProcess?.contact.website} target="_blank" rel="noreferrer" className="text-teal-600">{college.admissionProcess?.contact.website}</a></p>
                 </div>
-              </details>
+              </details> */}
 
               {/* Events */}
-              <details className="mb-3">
+              {/* <details className="mb-3">
                 <summary className="cursor-pointer font-semibold text-teal-600">Events</summary>
                 <div className="mt-2 dark:text-white text-sm text-gray-700">
                   {college.events?.map((event, i) => (
@@ -98,29 +99,33 @@ export default function AllColleges() {
                     </div>
                   ))}
                 </div>
-              </details>
+              </details> */}
 
               {/* Research History */}
-              <details className="mb-3">
-                <summary className="cursor-pointer font-semibold text-teal-600">Research History</summary>
-                <div className="mt-2 dark:text-white text-sm text-gray-700">
-                  <p><strong>Total Published Papers:</strong> {college.researchHistory?.totalPublishedPapers}</p>
-                  <p><strong>Top Departments:</strong> {college.researchHistory?.topDepartments.join(", ")}</p>
-                  <div className="mt-2">
-                    <p><strong>Recent Research Works:</strong></p>
-                    {college.researchHistory?.recentResearchWorks.map((work, i) => (
-                      <div key={i} className="mb-2 p-2 border rounded bg-gray-50 dark:bg-black">
-                        <p><strong>{work.title}</strong> ({work.year})</p>
-                        <p>{work.description}</p>
-                        <p><em>Lead Researcher: {work.leadResearcher}</em></p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </details>
+              <div className="mb-3">
+  <h3 className="font-semibold text-teal-600 mb-2">Research History</h3>
+  <div className="mt-2 space-y-2 dark:text-white text-sm text-gray-700">
+    <div className="lg:h-[90px]">
+        <p><strong>Total Published Papers:</strong> {college.researchHistory?.totalPublishedPapers}</p>
+    <p><strong>Top Departments:</strong> {college.researchHistory?.topDepartments.join(", ")}</p>
+    </div>
+
+    <div className="mt-2 ">
+      <p className="mb-3"><strong>Recent Research Works:</strong></p>
+      {college.researchHistory?.recentResearchWorks.map((work, i) => (
+        <div key={i} className="mb-2 p-2  rounded bg-gray-50 dark:bg-black">
+          <p><strong>{work.title}</strong> ({work.year})</p>
+          <p>{work.description}</p>
+          <p><em>Lead Researcher: {work.leadResearcher}</em></p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
               {/* Sports */}
-              <details>
+              {/* <details>
                 <summary className="cursor-pointer font-semibold text-teal-600">Sports</summary>
                 <div className="mt-2 dark:text-white text-sm text-gray-700">
                   <p><strong>Available Sports:</strong> {college.sports?.availableSports.join(", ")}</p>
@@ -139,7 +144,13 @@ export default function AllColleges() {
                     </div>
                   ))}
                 </div>
-              </details>
+              </details> */}
+
+              <Link href={`/college/${college.collegeId}`}>
+                <button className="mt-3 inline-block px-4 py-2 bg-teal-600 text-white rounded hover:bg-teal-700">
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
         ))}

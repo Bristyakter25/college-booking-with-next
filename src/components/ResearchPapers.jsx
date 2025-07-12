@@ -6,7 +6,7 @@ const researchPapers = [
     title: "The Impact of AI on Modern Education",
     author: "Samiul Haque (CSE, BHBS)",
     year: 2024,
-    link: "https://example.com/research/ai-education.pdf",
+    link: "https://www.researchgate.net/publication/386018934_The_impact_of_AI_on_education_and_careers_What_do_students_think",
     abstract:
       "This paper explores how artificial intelligence is transforming teaching, learning, and evaluation systems in higher education institutions.",
   },
@@ -14,7 +14,7 @@ const researchPapers = [
     title: "Entrepreneurship Trends Among Business Graduates",
     author: "Nafisa Chowdhury (BBA, BHBS)",
     year: 2023,
-    link: "https://example.com/research/entrepreneurship-trends.pdf",
+    link: "https://www.researchgate.net/publication/305397544_Entrepreneurship_among_graduates_Reality_and_prospects_in_tertiary_education",
     abstract:
       "This research investigates motivations and challenges faced by recent graduates in launching startups across urban Bangladesh.",
   },
@@ -22,10 +22,18 @@ const researchPapers = [
     title: "Green Finance and Sustainability Metrics",
     author: "Tanvir Rahman (MBA, BHBS)",
     year: 2022,
-    link: "https://example.com/research/green-finance.pdf",
+    link: "https://www.greenfinanceplatform.org/themes/indicators-and-measurement",
     abstract:
       "An analytical study on sustainable investment tools used in Bangladeshi banking sectors post-2020.",
   },
+  {
+  title: "Digital Entrepreneurship in Emerging Markets",
+  author: "Shamima Akter (BBA, BHBS)",
+  year: 2023,
+  link: "https://www.irejournals.com/paper-details/1707325",
+  abstract:
+    "A comprehensive study of how digital platforms are transforming startup ecosystems in Bangladesh, with a focus on post-pandemic acceleration.",
+}
 ];
 
 export default function ResearchPapers() {

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import SocialLogin from "./SocialLogin";
+import { signIn } from "next-auth/react";
 
 
 
@@ -9,33 +10,27 @@ export default function SignIn() {
   // const router = useRouter();
 
   const handleLogin = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const password = form.password.value;
-console.log(name,email,password);
-  try {
-      const res = await fetch("http://localhost:5000/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+  const form = e.target;
+  const email = form.email.value;
+  const password = form.password.value;
 
-      const result = await res.json();
+  const result = await signIn("credentials", {
+    redirect: false,
+    email,
+    password,
+    callbackUrl: "/",
+  });
 
-      if (result.success) {
-        alert("Login successful!");
-        
-      } else {
-        setError(result.message || "Login failed");
-      }
-    } catch (err) {
-      console.error("Login error:", err);
-      setError("Something went wrong");
-    }
-  };
+  if (result?.error) {
+    alert("Login failed: " + result.error);
+  } else {
+    alert("Login successful!");
+    window.location.href = result.url || "/"; // or use router.push(result.url)
+  }
+};
+
 
   return (
    <form onSubmit={handleLogin} className="space-y-5">
