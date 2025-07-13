@@ -24,7 +24,7 @@ export default function Colleges() {
     college.collegeName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // ✅ Move this line AFTER filteredColleges is defined
+ 
   const displayedColleges = searchTerm
     ? filteredColleges
     : colleges.slice(0, 3);
@@ -51,7 +51,8 @@ export default function Colleges() {
         {displayedColleges.map(college => (
           <div
             key={college._id || college.collegeId}
-            className="border rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow dark:bg-blue-950 bg-white"
+            className="border rounded-lg shadow-md overflow-hidden transition-shadow transform duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(13,148,136,0.5)] dark:bg-blue-950 bg-white"
+
           >
             <img
               src={college.collegeImage}

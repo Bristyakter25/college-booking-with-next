@@ -43,7 +43,8 @@ export default function ResearchPapers() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {researchPapers.map((paper, i) => (
-          <div key={i} className="bg-white dark:bg-slate-800 border rounded-lg shadow p-5">
+          <div key={i} className="bg-white dark:bg-slate-800 border rounded-lg shadow p-5 transition-shadow transform duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(13,148,136,0.5)]"
+>
             <h3 className="text-xl font-semibold text-teal-600 mb-1">{paper.title}</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
               <strong>Author:</strong> {paper.author} • <strong>Year:</strong> {paper.year}

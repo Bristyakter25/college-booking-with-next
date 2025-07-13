@@ -2,7 +2,7 @@
   {
     "collegeId": "clg001",
     "collegeName": "Green Valley University",
-    "collegeImage": "https://example.com/images/green-valley.jpg",
+    "collegeImage": "https://i.ibb.co/q3s0vNJJ/green-valley-university.jpg",
     "admissionDates": {
       "start": "2025-06-01",
       "end": "2025-08-15"
@@ -77,7 +77,7 @@
   {
     "collegeId": "clg002",
     "collegeName": "Lakewood Institute of Technology",
-    "collegeImage": "https://example.com/images/lakewood.jpg",
+    "collegeImage": "https://i.ibb.co/23WVYcrj/lakewood-institute.jpg",
     "admissionDates": {
       "start": "2025-07-01",
       "end": "2025-09-01"
@@ -141,7 +141,7 @@
   {
     "collegeId": "clg003",
     "collegeName": "Hillside Medical College",
-    "collegeImage": "https://example.com/images/hillside.jpg",
+    "collegeImage": "https://i.ibb.co/35FGXHPW/pexels-zetong-li-880728-9792417.jpg",
     "admissionDates": {
       "start": "2025-05-10",
       "end": "2025-07-30"
@@ -205,7 +205,7 @@
   {
     "collegeId": "clg004",
     "collegeName": "Skyline Architecture Academy",
-    "collegeImage": "https://example.com/images/skyline.jpg",
+    "collegeImage": "https://i.ibb.co/wrJxQF5q/skyline-architecture.jpg",
     "admissionDates": {
       "start": "2025-06-10",
       "end": "2025-09-01"
@@ -269,7 +269,7 @@
   {
     "collegeId": "clg005",
     "collegeName": "Northern Polytechnic Institute",
-    "collegeImage": "https://example.com/images/northern.jpg",
+    "collegeImage": "https://i.ibb.co/GvK4v2Kw/northern-plytechnic-institute.jpg",
     "admissionDates": {
       "start": "2025-05-01",
       "end": "2025-07-15"
@@ -333,7 +333,7 @@
   {
     "collegeId": "clg006",
     "collegeName": "Blue Horizon Business School",
-    "collegeImage": "https://example.com/images/blue-horizon.jpg",
+    "collegeImage": "https://i.ibb.co/DDCpkxTV/blue-horizon-school.jpg",
     "admissionDates": {
       "start": "2025-04-15",
       "end": "2025-06-30"

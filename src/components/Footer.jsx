@@ -12,8 +12,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
         {/* Logo & About */}
         <div className="md:w-1/3">
-          <h2 className="text-2xl font-bold mb-3">YourSite</h2>
-          <p className="text-gray-300 max-w-sm">
+          <h2 className="text-2xl font-bold mb-3">EduReserve</h2>
+          <p className="text-gray-700 dark:text-gray-200  max-w-sm">
             Empowering learners with quality education and community-driven
             experiences. Join us and grow your skills every day.
           </p>
@@ -102,8 +102,8 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-teal-700 mt-8 pt-4 text-center text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} YourSite. All rights reserved.
+      <div className="border-t border-teal-700  mt-8 pt-4 text-center text-sm text-gray-700 dark:text-gray-300">
+        &copy; {new Date().getFullYear()} EduReserve. All rights reserved.
       </div>
     </footer>
   );

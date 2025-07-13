@@ -10,16 +10,16 @@ export default function Navbar() {
 
   const links = (
     <>
-      <li><Link href="/">Home</Link></li>
-      <li><Link href="/allColleges">Colleges</Link></li>
-      <li><Link href="/admissionRoute">Admission</Link></li>
-      <li><Link href="/my-college">My College</Link></li>
+      <li className='text-[17px]'><Link href="/">Home</Link></li>
+      <li className='text-[17px]'><Link href="/allColleges">Colleges</Link></li>
+      <li className='text-[17px]'><Link href="/admissionRoute">Admission</Link></li>
+      <li className='text-[17px]'><Link href="/my-college">My College</Link></li>
     </>
   );
 
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar px-5 bg-base-100 shadow-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,7 +31,7 @@ export default function Navbar() {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">College Booking</a>
+          <a className="btn btn-ghost font-bold text-2xl">EduReserve</a>
         </div>
 
         <div className="navbar-center hidden lg:flex">
