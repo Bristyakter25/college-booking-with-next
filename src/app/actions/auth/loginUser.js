@@ -1,6 +1,6 @@
 
 export async function loginUser({ email, password }) {
-  const res = await fetch("http://localhost:5000/login", {
+  const res = await fetch("https://college-booking-facilities-server-five.vercel.app/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

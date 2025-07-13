@@ -22,7 +22,7 @@ export default function AdmissionForm() {
   useEffect(() => {
     const fetchCollege = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/collegeInfo/${id}`);
+        const res = await fetch(`https://college-booking-facilities-server-five.vercel.app/collegeInfo/${id}`);
         const data = await res.json();
         if (data?.collegeName) {
           setCollegeName(data.collegeName);
@@ -40,7 +40,7 @@ export default function AdmissionForm() {
     const payload = { ...formData, collegeName };
 
     try {
-      const res = await fetch("http://localhost:5000/admissions", {
+      const res = await fetch("https://college-booking-facilities-server-five.vercel.app/admissions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)

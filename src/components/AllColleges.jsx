@@ -8,7 +8,7 @@ export default function AllColleges() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/collegeInfo")
+    fetch("https://college-booking-facilities-server-five.vercel.app/collegeInfo")
       .then(res => res.json())
       .then(data => {
         setColleges(data);

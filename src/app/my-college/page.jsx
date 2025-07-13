@@ -14,7 +14,7 @@ export default function MyCollege() {
   useEffect(() => {
     if (!email) return;
 
-    fetch(`http://localhost:5000/admissions/${email}`)
+    fetch(`https://college-booking-facilities-server-five.vercel.app/admissions/${email}`)
       .then(res => res.json())
       .then(data => {
         const admissions = Array.isArray(data) ? data : [data];
@@ -37,7 +37,7 @@ export default function MyCollege() {
     }
 
     try {
-      await fetch("http://localhost:5000/reviews", {
+      await fetch("https://college-booking-facilities-server-five.vercel.app/reviews", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...review, email }),

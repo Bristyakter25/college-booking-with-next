@@ -21,7 +21,7 @@ export default function CollegeDetails() {
   useEffect(() => {
     if (!id || !session) return;
 
-    fetch(`http://localhost:5000/collegeInfo`)
+    fetch(`https://college-booking-facilities-server-five.vercel.app/collegeInfo`)
       .then(res => res.json())
       .then(data => {
         const found = data.find(item => item.collegeId === id);

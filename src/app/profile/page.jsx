@@ -28,7 +28,7 @@ export default function ProfilePage() {
 
     async function fetchUser() {
       try {
-        const res = await fetch(`http://localhost:5000/users?email=${session.user.email}`);
+        const res = await fetch(`https://college-booking-facilities-server-five.vercel.app/users?email=${session.user.email}`);
 
         if (!res.ok) {
           setError('User not found');
@@ -68,7 +68,7 @@ export default function ProfilePage() {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/users/${userInfo._id}`, {
+      const res = await fetch(`https://college-booking-facilities-server-five.vercel.app/users/${userInfo._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

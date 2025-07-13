@@ -43,7 +43,7 @@ export const authOptions = {
     async signIn({ user, account }) {
       if (account.provider === "google" || account.provider === "github") {
         try {
-          await fetch("http://localhost:5000/social-user", {
+          await fetch("https://college-booking-facilities-server-five.vercel.app/social-user", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

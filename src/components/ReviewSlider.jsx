@@ -29,7 +29,7 @@ export default function ReviewSlider() {
   useEffect(() => {
     async function fetchReviews() {
       try {
-        const res = await fetch('http://localhost:5000/reviews');
+        const res = await fetch('https://college-booking-facilities-server-five.vercel.app/reviews');
         if (!res.ok) throw new Error('Failed to fetch reviews');
         const data = await res.json();
         setReviews(data);
