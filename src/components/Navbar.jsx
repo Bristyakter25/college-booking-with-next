@@ -44,7 +44,9 @@ export default function Navbar() {
           {session?.user ? (
             <>
               <div className="flex items-center gap-2">
-                <p>{session.user.name}</p>
+                <Link href="/profile" className="hover:underline">
+            {session.user.name || session.user.email}
+          </Link>
                 <button
                   onClick={() => signOut()}
                   className="rounded-md bg-red-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-red-600"

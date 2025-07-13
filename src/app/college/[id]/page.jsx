@@ -1,14 +1,26 @@
 'use client';
 import { useEffect, useState } from "react";
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
+import { useSession } from "next-auth/react";
 
 export default function CollegeDetails() {
   const { id } = useParams();
+  const router = useRouter();
+  const { data: session, status } = useSession();
   const [college, setCollege] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Redirect if not logged in
   useEffect(() => {
-    if (!id) return;
+    if (status === 'loading') return; // wait for session check
+    if (!session) {
+      router.push('/login');
+    }
+  }, [session, status, router]);
+
+  useEffect(() => {
+    if (!id || !session) return;
+
     fetch(`http://localhost:5000/collegeInfo`)
       .then(res => res.json())
       .then(data => {
@@ -16,9 +28,9 @@ export default function CollegeDetails() {
         setCollege(found);
         setLoading(false);
       });
-  }, [id]);
+  }, [id, session]);
 
-  if (loading) return <p className="text-center mt-10">Loading college details...</p>;
+  if (status === 'loading' || loading) return <p className="text-center mt-10">Loading...</p>;
   if (!college) return <p className="text-center mt-10 text-red-500">College not found</p>;
 
   return (

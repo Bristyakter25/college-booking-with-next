@@ -14,12 +14,12 @@ export default function Admission() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Select a College to Apply</h1>
-      <ul className="space-y-3">
+      <h1 className="text-2xl font-bold mb-4 text-center">Select a College to Apply</h1>
+      <ul className="space-y-3 px-28">
         {colleges.map(college => (
           <li key={college._id}>
             <Link href={`/Admission/${college._id}`}>
-              <span className="text-blue-600 hover:underline cursor-pointer">
+              <span className="text-blue-600 text-center hover:underline cursor-pointer">
                 {college.collegeName}
               </span>
             </Link>
